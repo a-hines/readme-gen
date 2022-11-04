@@ -22,6 +22,32 @@ const promptUser = () => {
     },
     {
         type: 'input',
+        name: 'github',
+        message: 'What is your Github username? (Required)',
+        validate: githubInput => {
+            if (githubInput) {
+              return true;
+            } else { 
+              console.log('Please enter your Github username!');
+              return false;
+            }
+          }
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What is your email address? (Required)',
+        validate: emailInput => {
+            if (emailInput) {
+              return true;
+            } else { 
+              console.log('Please enter your email address!');
+              return false;
+            }
+          }
+    },
+    {
+        type: 'input',
         name: 'link',
         message: 'Enter the link to your deployed application. (Required)',
         validate: linkInput => {
@@ -41,18 +67,29 @@ const promptUser = () => {
     },
     {
         type: 'input',
-        name: 'motivation',
-        message: 'What was your motivation?/Why did you build this project?'
+        name: 'description',
+        message: 'Please enter a brief description of your project:'
     },
     {
         type: 'input',
-        name: 'learn',
-        message: 'What did you learn while building this project?'
+        name: 'install',
+        message: 'Please provide instructions for installation of your project:'
     },
     {
         type: 'input',
-        name: 'standout',
-        message: 'What makes your project stand out?'
+        name: 'contribution',
+        message: 'Please provide contribution guidelines for your project:'
+    },
+    {
+        type: 'checkbox',
+        name: 'license',
+        message: 'What license is your project covered under?',
+        choices: ['Apache 2.0', 'BSD', 'GNU', 'MIT', 'None']
+    },
+    {
+        type: 'input',
+        name: 'tests',
+        message: 'Please provide examples on how to run tests for your project:'
     }
     ])
 }
