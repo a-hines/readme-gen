@@ -15,7 +15,7 @@ const promptUser = () => {
             if (nameInput) {
               return true;
             } else { 
-              console.log('Please enter your name!');
+              console.log('Please enter the name of your project!');
               return false;
             }
           }
