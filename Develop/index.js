@@ -84,7 +84,7 @@ const promptUser = () => {
         type: 'checkbox',
         name: 'license',
         message: 'What license is your project covered under?',
-        choices: ['Apache 2.0', 'BSD', 'GNU', 'MIT', 'None']
+        choices: ['Apache 2.0', 'Boost Software License 1.0', 'GNU GPLv3', 'MIT', 'Mozilla Public License 2.0', 'The Unlicense', 'None']
     },
     {
         type: 'input',
